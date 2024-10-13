@@ -14,7 +14,7 @@ public class CarService {
     private final CarRepository carRepository;
 
     public Page<Car> findAll(String search,Pageable pageable){
-        return carRepository.findAll(search,pageable);
+        return carRepository.findAll(pageable);
     }
 
     public Car findById(Long id){

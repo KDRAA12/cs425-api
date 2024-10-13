@@ -11,7 +11,5 @@ import rent.app.demo.entities.RentalRequest;
 
 @Repository
 public interface RentalRequestRepository extends JpaRepository<RentalRequest,Long> {
-    @Query("SELECT c FROM RentalRequest c WHERE c.car.make like :search" )
-    Page<RentalRequest> findAll(String search, Pageable pageable);
 
  }

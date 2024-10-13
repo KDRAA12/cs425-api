@@ -18,7 +18,7 @@ public class RentalRequestService {
     private final RentalRequestRepository rentalRequestRepository;
 
     public Page<RentalRequest> findAll(String search, Pageable pageable) {
-        return rentalRequestRepository.findAll(search,pageable);
+        return rentalRequestRepository.findAll(pageable);
     }
 
     public RentalRequest findById(Long id) {
