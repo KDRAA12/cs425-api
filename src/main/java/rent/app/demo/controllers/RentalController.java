@@ -11,7 +11,7 @@ import rent.app.demo.services.CarService;
 import rent.app.demo.services.RentalRequestService;
 
 @RestController
-@RequestMapping("/api/rental-reuests")
+@RequestMapping("/api/rental-requests")
 @AllArgsConstructor
 public class RentalController {
     private final RentalRequestService rentalRequestService;
@@ -33,7 +33,7 @@ public class RentalController {
         rentalRequestService.deleteById(id);
     }
 
-    @PostMapping()
+    @PostMapping
     public RentalRequest saveRentalRequest(@RequestBody RentalRequest rentalRequest){
         return rentalRequestService.save(rentalRequest);
     }

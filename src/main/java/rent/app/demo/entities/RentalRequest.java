@@ -16,8 +16,10 @@ public class RentalRequest {
 
     private Long id;
 
-    @ManyToOne
-    private User customer;
+    private String customerName;
+    private String customerEmail;
+    private String customerPhone;
+
 
     private LocalDateTime pickupDate;
     private LocalDateTime returnDate;

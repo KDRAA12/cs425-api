@@ -38,7 +38,6 @@ public class RentalRequestService {
 
     public RentalRequest update(Long id, RentalRequest rentalRequest) {
         RentalRequest rentalRequest1 = rentalRequestRepository.findById(id).orElseThrow(() -> new NotFoundException("Rental request not found id:" + id));
-      rentalRequest1.setCustomer(rentalRequest.getCustomer());
         rentalRequest1.setPickupDate(rentalRequest.getPickupDate());
         rentalRequest1.setReturnDate(rentalRequest.getReturnDate());
         rentalRequest1.setCar(rentalRequest.getCar());
